@@ -1,7 +1,6 @@
 FROM ubuntu:14.04
 
 MAINTAINER Y.K. Goon (ykgoon@gmail.com)
-# This file can also be cloned from https://github.com/ykgoon/casperjs-docker
 
 RUN apt-get update
 RUN apt-get -y upgrade
@@ -28,6 +27,6 @@ RUN echo "export NODE_PATH=/usr/lib/node_modules/" >> /root/.bashrc
 RUN npm install -g nodemailer
 RUN npm install -g nodemailer-smtp-transport
 
-WORKDIR /srv/aristotle
+WORKDIR /srv/test
 
-VOLUME ['/srv/aristotle']
+VOLUME ['/srv/test']
